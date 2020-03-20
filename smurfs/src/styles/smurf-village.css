@@ -1,0 +1,84 @@
+.get-button{
+    background-color: #62CDFD;
+    padding: .5rem 2rem;
+    border: blue solid 1px;
+    border-radius: 10px;
+    color: white;
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-shadow: -1px -1px 0 blue, 1px 1px 0 blue, 0 -1px 0 blue,
+	0 1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 0 0 blue,
+    -1px 0 0 blue; 
+    color:white;
+    width:40%;
+    height:10%;
+}
+.get-button:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    background: linear-gradient(to right, blue, #62CDFD );
+    border: #62CDFD solid 1px;
+}
+.add-button{
+    background-color: #62CDFD;
+    padding: .5rem 2rem;
+    border: blue solid 1px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    margin: 1rem;
+    text-shadow: -1px -1px 0 blue, 1px 1px 0 blue, 0 -1px 0 blue,
+	0 1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 0 0 blue,
+    -1px 0 0 blue; 
+    color:white;
+}
+.add-button:hover{
+    background: linear-gradient(to right, blue, #62CDFD);
+    border: #62CDFD solid 1px;
+    border: blue solid 1px;   
+}
+.labels{
+    background-color: #62CDFD;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    margin-top: .5rem;
+    text-shadow: -1px -1px 0 blue, 1px 1px 0 blue, 0 -1px 0 blue,
+	0 1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 0 0 blue,
+    -1px 0 0 blue; 
+    color:white;
+    letter-spacing: 2px;
+}
+form{
+    background-color: #62CDFD;
+    padding: 1.5rem 2rem 0rem 2rem;
+    border: blue solid 1px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    width:70%;
+    text-shadow: -1px -1px 0 blue, 1px 1px 0 blue, 0 -1px 0 blue,
+	0 1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 0 0 blue,
+    -1px 0 0 blue; 
+    color:white;
+    margin:1rem;    
+}
+input{
+    color: blue;
+    border: blue solid 1px;
+    border-radius: 10px;
+    height: 3vh;
+    font-size: 1.2rem;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.map{
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
