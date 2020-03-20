@@ -1,6 +1,7 @@
 import {FETCHING_SMURF_START,
 FETCHING_SMURF_SUCCESS, 
-FETCHING_SMURF_ERROR} from '../actions'
+FETCHING_SMURF_ERROR,
+ADD_SMURF} from '../actions'
 
 const initialState = {
     isLoading: false,
@@ -28,6 +29,12 @@ export const reducer = (state = initialState, action ) => {
                 isloading:false,
                 smurfs: [],
                 error: 'sorry no smurfs in hour village'
+            }
+        case ADD_SMURF:
+            return{
+                ...state,
+                islaoding:false,
+                smurfs: action.payload
             }
         default:
             return state
