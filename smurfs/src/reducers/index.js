@@ -1,7 +1,9 @@
 import {FETCHING_SMURF_START,
 FETCHING_SMURF_SUCCESS, 
 FETCHING_SMURF_ERROR,
-ADD_SMURF} from '../actions'
+ADD_SMURF,
+DELETE_SMURF
+} from '../actions'
 
 const initialState = {
     isLoading: false,
@@ -33,6 +35,12 @@ export const reducer = (state = initialState, action ) => {
             return{
                 ...state,
                 islaoding:false,
+                smurfs: action.payload
+            }
+        case DELETE_SMURF:
+            return {
+                ...state,
+                islaoding: false,
                 smurfs: action.payload
             }
         default:

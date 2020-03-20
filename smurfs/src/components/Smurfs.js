@@ -11,7 +11,7 @@ const Smurf = props => {
                 <h4 className='text name' >Name: {smurf.name}</h4>
                 <div className='text' >Age: {smurf.age}</div>
                 <div className='text'>Height: {smurf.height}</div>
-                <button className='remove-button'>Remove Smurf</button>
+                <button className='remove-button' onClick={()=> props.removeSmurf(smurf.id)}>Remove Smurf</button>
             </div>
         ))}
     </div>)

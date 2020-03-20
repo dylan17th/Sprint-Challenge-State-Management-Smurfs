@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import Smurf from './Smurfs';
-import { dataGetter, addSmurf } from '../actions'
+import { dataGetter, addSmurf, removeSmurf } from '../actions'
 import '../styles/smurf-village.css'
 
 const SmurfVillage = props => {
@@ -34,13 +34,13 @@ const SmurfVillage = props => {
                 setInput({
                     name:'',
                     age:'',
-                    heigh:''
+                    height:''
                 })
             }}>Add Smurf</button>
         </form>
         <button className='get-button' onClick={props.dataGetter}>Get The Smurf's</button>
         <div className='map'>
-            <Smurf smurfs={props.smurfs}/>
+            <Smurf smurfs={props.smurfs} removeSmurf={props.removeSmurf}/>
         </div>
     </div>)
 }
@@ -53,4 +53,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {dataGetter, addSmurf })(SmurfVillage);
+export default connect(mapStateToProps, {dataGetter, addSmurf, removeSmurf })(SmurfVillage);
