@@ -1,3 +1,16 @@
 .App {
   text-align: center;
 }
+.main-title{
+  background-color: #62CDFD;
+  padding: .5rem 2rem;
+  border: blue solid 1px;
+  border-radius: 10px;
+  color: white;
+  font-size: 3rem;
+  margin: 1.5rem;
+  text-shadow: -1px -1px 0 blue, 1px 1px 0 blue, 0 -1px 0 blue,
+0 1px 0 blue, 1px -1px 0 blue, -1px 1px 0 blue, 1px 0 0 blue,
+  -1px 0 0 blue; 
+  color:white;
+}

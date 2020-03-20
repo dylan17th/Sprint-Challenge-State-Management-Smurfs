@@ -3,7 +3,6 @@ import axios from 'axios'
 export const FETCHING_SMURF_START = 'FETCHING_SMURF_START';
 export const FETCHING_SMURF_SUCCESS = 'FETCHING_SMURF_SUCCESS';
 export const FETCHING_SMURF_ERROR = 'FETCHING_SMURF_ERROR';
-
 export const ADD_SMURF = 'ADD_SMURF';
 
 export const dataGetter = () => dispatch => {

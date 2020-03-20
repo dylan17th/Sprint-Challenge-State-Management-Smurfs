@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import Smurf from './Smurfs';
 import { dataGetter, addSmurf } from '../actions'
-
-
-
+import '../styles/smurf-village.css'
 
 const SmurfVillage = props => {
-    console.log(props)
+
     const [ input, setInput ] = useState({
         name: '',
         age: '',
@@ -20,17 +18,17 @@ const SmurfVillage = props => {
             [e.target.name]: e.target.value
         })
     }
-    console.log(input)
+
     return (
-    <div>
+    <div className='container'>
         <form>
-            <label htmlFor='name'>Name:</label>
+            <label className='labels' htmlFor='name'>Name:</label>
             <input id='name' name='name' type='text' onChange={changeHandler} value={input.name}/>
-            <label htmlFor='age'>Age:</label>
+            <label className='labels' htmlFor='age'>Age:</label>
             <input id='age' name='age' type='text' onChange={changeHandler} value={input.age}/>
-            <label htmlFor='height'>Height:</label>
+            <label className='labels' htmlFor='height'>Height:</label>
             <input id='height' name='height' type='text' onChange={changeHandler} value={input.height}/>
-            <button onClick={e => {
+            <button className='add-button' onClick={e => {
                 e.preventDefault()
                 props.addSmurf(input)
                 setInput({
@@ -40,9 +38,10 @@ const SmurfVillage = props => {
                 })
             }}>Add Smurf</button>
         </form>
-        <button onClick={props.dataGetter}>Get the Smurf Village</button>
-        <Smurf smurfs={props.smurfs}/>
-        
+        <button className='get-button' onClick={props.dataGetter}>Get The Smurf's</button>
+        <div className='map'>
+            <Smurf smurfs={props.smurfs}/>
+        </div>
     </div>)
 }
 

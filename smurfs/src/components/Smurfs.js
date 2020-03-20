@@ -1,16 +1,17 @@
-import React from 'react'
-
-
+import React from 'react';
+import smurfImg from '../styles/smurf.jpeg';
+import '../styles/smurf.css'
 
 const Smurf = props => {
-    console.log('this my the array i need', props)
     return (
-    <div>
+    <div className='containerss'>
         {props.smurfs.map( smurf => (
-            <div key={smurf.id}>
-                <h4>Name: {smurf.name}</h4>
-                <div>Age: {smurf.age}</div>
-                <div>Height: {smurf.height}</div>
+            <div key={smurf.id} className='smurf-container'>
+                <img className='image' src={smurfImg} alt='smurf picture'/>
+                <h4 className='text name' >Name: {smurf.name}</h4>
+                <div className='text' >Age: {smurf.age}</div>
+                <div className='text'>Height: {smurf.height}</div>
+                <button className='remove-button'>Remove Smurf</button>
             </div>
         ))}
     </div>)
